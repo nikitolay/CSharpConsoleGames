@@ -1,0 +1,15 @@
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\bin\Debug\net6.0\CSharpConsoleGames.exe
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\bin\Debug\net6.0\CSharpConsoleGames.deps.json
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\bin\Debug\net6.0\CSharpConsoleGames.runtimeconfig.json
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\bin\Debug\net6.0\CSharpConsoleGames.dll
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\bin\Debug\net6.0\CSharpConsoleGames.pdb
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\obj\Debug\net6.0\CSharpConsoleGames.csproj.AssemblyReference.cache
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\obj\Debug\net6.0\CSharpConsoleGames.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\obj\Debug\net6.0\CSharpConsoleGames.AssemblyInfoInputs.cache
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\obj\Debug\net6.0\CSharpConsoleGames.AssemblyInfo.cs
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\obj\Debug\net6.0\CSharpConsoleGames.csproj.CoreCompileInputs.cache
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\obj\Debug\net6.0\CSharpConsoleGames.dll
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\obj\Debug\net6.0\refint\CSharpConsoleGames.dll
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\obj\Debug\net6.0\CSharpConsoleGames.pdb
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\obj\Debug\net6.0\CSharpConsoleGames.genruntimeconfig.cache
+C:\Users\nikor\source\repos\CSharpConsoleGames\CSharpConsoleGames\obj\Debug\net6.0\ref\CSharpConsoleGames.dll
