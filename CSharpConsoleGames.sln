@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpConsoleGames", "CSharpConsoleGames\CSharpConsoleGames.csproj", "{56B42413-BA1A-429F-BAD4-BDBAF3BA924F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Snake\Snake.csproj", "{ACC75A08-3F8F-4A8B-8577-52DF1F27EDF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56B42413-BA1A-429F-BAD4-BDBAF3BA924F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56B42413-BA1A-429F-BAD4-BDBAF3BA924F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56B42413-BA1A-429F-BAD4-BDBAF3BA924F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56B42413-BA1A-429F-BAD4-BDBAF3BA924F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACC75A08-3F8F-4A8B-8577-52DF1F27EDF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACC75A08-3F8F-4A8B-8577-52DF1F27EDF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACC75A08-3F8F-4A8B-8577-52DF1F27EDF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACC75A08-3F8F-4A8B-8577-52DF1F27EDF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B54C34E9-8DD4-4445-AF89-4BFA80E95E5E}
+	EndGlobalSection
+EndGlobal
