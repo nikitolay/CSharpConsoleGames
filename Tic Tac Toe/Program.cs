@@ -10,7 +10,7 @@
             Console.WindowWidth = 20;
             Console.BufferHeight = 10;
             Console.BufferWidth = 20;
-            //
+            ///
             while (true)
             {
 
