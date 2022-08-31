@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.csproj",
+      "projectUniqueName": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.csproj",
       "projectName": "Tic Tac Toe",
-      "projectPath": "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.csproj",
+      "projectPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.csproj",
       "packagesPath": "C:\\Users\\nikor\\.nuget\\packages\\",
-      "outputPath": "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\obj\\",
+      "outputPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nikor\\AppData\\Roaming\\NuGet\\NuGet.Config",

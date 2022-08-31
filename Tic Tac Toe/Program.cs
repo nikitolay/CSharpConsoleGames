@@ -1,10 +1,10 @@
-﻿namespace CSharpConsoleGames
+﻿namespace Tic_Tac_Toe
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int[,] table = new int[5,5];
+            int[,] table = new int[5, 5];
             Console.Title = "Tic-Tac-Toe Game";
             Console.WindowHeight = 10;
             Console.WindowWidth = 20;
