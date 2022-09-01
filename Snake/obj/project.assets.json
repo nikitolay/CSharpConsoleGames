@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Snake\\Snake.csproj",
+      "projectUniqueName": "C:\\git\\CSharpConsoleGames\\Snake\\Snake.csproj",
       "projectName": "Snake",
-      "projectPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Snake\\Snake.csproj",
+      "projectPath": "C:\\git\\CSharpConsoleGames\\Snake\\Snake.csproj",
       "packagesPath": "C:\\Users\\nikor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Snake\\obj\\",
+      "outputPath": "C:\\git\\CSharpConsoleGames\\Snake\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nikor\\AppData\\Roaming\\NuGet\\NuGet.Config",
