@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\CSharpConsoleGames\\Snake\\Snake.csproj": {}
+    "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Snake\\Snake.csproj": {}
   },
   "projects": {
-    "C:\\git\\CSharpConsoleGames\\Snake\\Snake.csproj": {
+    "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Snake\\Snake.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\CSharpConsoleGames\\Snake\\Snake.csproj",
+        "projectUniqueName": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Snake\\Snake.csproj",
         "projectName": "Snake",
-        "projectPath": "C:\\git\\CSharpConsoleGames\\Snake\\Snake.csproj",
+        "projectPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Snake\\Snake.csproj",
         "packagesPath": "C:\\Users\\nikor\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\CSharpConsoleGames\\Snake\\obj\\",
+        "outputPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Snake\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nikor\\AppData\\Roaming\\NuGet\\NuGet.Config",

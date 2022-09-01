@@ -26,7 +26,7 @@
                         table[i, j] = ' ';
                     }
                 }
-
+                Console.WriteLine();
             }
         }
     }
