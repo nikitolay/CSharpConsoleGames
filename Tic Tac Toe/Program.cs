@@ -5,13 +5,12 @@ namespace Tic_Tac_Toe
 {
     internal class Program
     {
+        const int rightArrowCol=0, downArrowRow = 0;
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
             char[,] table = new char[5, 5];
-            int startIndexOfUpArrow = 0;
-            int startIndexOfDownArrow = 0;
             Console.Title = "Tic-Tac-Toe Game";
+            Console.OutputEncoding = Encoding.UTF8;
             //Console.WindowHeight = 10;
             //Console.WindowWidth = 20;
             //Console.BufferHeight = 10;
@@ -57,33 +56,33 @@ namespace Tic_Tac_Toe
                         ConsoleKeyInfo command = Console.ReadKey();
                         if (command.Key == ConsoleKey.UpArrow && IsInside(row - 1))
                         {
-                            table[row, 0] = ' ';
+                            table[row,rightArrowCol] = ' ';
                             row--;
-                            table[row, 0] = '→';
+                            table[row, rightArrowCol] = '→';
                             Console.Clear();
                             DrawBoard(table);
                         }
                         else if (command.Key == ConsoleKey.DownArrow && IsInside(row + 1))
                         {
-                            table[row, 0] = ' ';
+                            table[row, rightArrowCol] = ' ';
                             row++;
-                            table[row, 0] = '→';
+                            table[row, rightArrowCol] = '→';
                             Console.Clear();
                             DrawBoard(table);
                         }
                         else if (command.Key == ConsoleKey.LeftArrow && IsInside(col - 1))
                         {
-                            table[0, col] = ' ';
+                            table[downArrowRow, col] = ' ';
                             col--;
-                            table[0, col] = '↓';
+                            table[downArrowRow, col] = '↓';
                             Console.Clear();
                             DrawBoard(table);
                         }
                         else if (command.Key == ConsoleKey.RightArrow && IsInside(col +1))
                         {
-                            table[0, col] = ' ';
+                            table[downArrowRow, col] = ' ';
                             col++;
-                            table[0, col] = '↓';
+                            table[downArrowRow, col] = '↓';
                             Console.Clear();
                             DrawBoard(table);
                         }
