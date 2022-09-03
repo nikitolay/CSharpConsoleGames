@@ -9,6 +9,8 @@ namespace Tic_Tac_Toe
         {
             Console.OutputEncoding = Encoding.UTF8;
             char[,] table = new char[5, 5];
+            int startIndexOfUpArrow = 0;
+            int startIndexOfDownArrow = 0;
             Console.Title = "Tic-Tac-Toe Game";
             //Console.WindowHeight = 10;
             //Console.WindowWidth = 20;
@@ -34,15 +36,80 @@ namespace Tic_Tac_Toe
                 Random randomPlayer = new Random();
                 int firstPlayer = randomPlayer.Next(0, 2);
                 char playerTurn = ' ';
-                if (firstPlayer % 2 == 0)
+
+                while (true)
                 {
-                    playerTurn = 'O';
+                    if (firstPlayer % 2 == 0)
+                    {
+                        playerTurn = 'O';
+                    }
+                    else
+                    {
+                        playerTurn = 'X';
+                    }
+                    int row = 1;
+                    int col = 1;
+                        ResetArrows(table);
+                    while (true)
+                    {
+                        DrawBoard(table);
+
+                        ConsoleKeyInfo command = Console.ReadKey();
+                        if (command.Key == ConsoleKey.UpArrow && IsInside(row - 1))
+                        {
+                            table[row, 0] = ' ';
+                            row--;
+                            table[row, 0] = '→';
+                            Console.Clear();
+                            DrawBoard(table);
+                        }
+                        else if (command.Key == ConsoleKey.DownArrow && IsInside(row + 1))
+                        {
+                            table[row, 0] = ' ';
+                            row++;
+                            table[row, 0] = '→';
+                            Console.Clear();
+                            DrawBoard(table);
+                        }
+                        else if (command.Key == ConsoleKey.LeftArrow && IsInside(col - 1))
+                        {
+                            table[0, col] = ' ';
+                            col--;
+                            table[0, col] = '↓';
+                            Console.Clear();
+                            DrawBoard(table);
+                        }
+                        else if (command.Key == ConsoleKey.RightArrow && IsInside(col +1))
+                        {
+                            table[0, col] = ' ';
+                            col++;
+                            table[0, col] = '↓';
+                            Console.Clear();
+                            DrawBoard(table);
+                        }
+                        else if (command.Key == ConsoleKey.Enter)
+                        {
+                           break;
+                        }
+
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 }
-                else
-                {
-                    playerTurn = 'X';
-                }
-                
+
 
 
 
@@ -57,15 +124,15 @@ namespace Tic_Tac_Toe
         static void DrawBoard(char[,] table)
         {
             Console.SetCursorPosition(6, 0);
-            Console.WriteLine($"{table[0, 1]}  {table[0, 2]}   {table[0, 3]} ");
+            Console.WriteLine($"{table[0, 1]}   {table[0, 2]}   {table[0, 3]} ");
             Console.SetCursorPosition(2, 1);
             Console.WriteLine($"{table[1, 0]} | {table[1, 1]} | {table[1, 2]} | {table[1, 3]} |");
-            Console.SetCursorPosition(4, 2);
+            Console.SetCursorPosition(2, 2);
 
-            Console.WriteLine($"| {table[2, 1]} | {table[2, 2]} | {table[2, 3]} |");
-            Console.SetCursorPosition(4, 3);
+            Console.WriteLine($"{table[2, 0]} | {table[2, 1]} | {table[2, 2]} | {table[2, 3]} |");
+            Console.SetCursorPosition(2, 3);
 
-            Console.WriteLine($"| {table[3, 1]} | {table[3, 2]} | {table[3, 3]} |");
+            Console.WriteLine($"{table[3, 0]} | {table[3, 1]} | {table[3, 2]} | {table[3, 3]} |");
         }
         static void ResetArrows(char[,] table)
         {
@@ -74,9 +141,13 @@ namespace Tic_Tac_Toe
             table[0, 3] = ' ';
 
             table[1, 0] = '→';
-            table[1, 1] = ' ';
-            table[1, 2] = ' ';
+            table[2, 0] = ' ';
+            table[3, 0] = ' ';
 
+        }
+        static bool IsInside(int number)
+        {
+            return number>=1&& number <= 3;
         }
         static int WinnerCheck(char[,] table)
         {
