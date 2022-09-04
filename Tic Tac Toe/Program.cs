@@ -94,9 +94,9 @@ namespace Tic_Tac_Toe
                         Console.WriteLine("Тhe seat is already taken!");
                         continue;
                     }
-
-
-
+                    table[row, col] = playerTurn;
+                    firstPlayer++;
+                    
 
 
 
