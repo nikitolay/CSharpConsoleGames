@@ -11,11 +11,11 @@ namespace Tic_Tac_Toe
             char[,] table = new char[5, 5];
             Console.Title = "Tic-Tac-Toe Game :";
             Console.OutputEncoding = Encoding.UTF8;
-            //Console.WindowHeight = 10;
-            //Console.WindowWidth = 20;
-            //Console.BufferHeight = 10;
-            //Console.BufferWidth = 20;
-            //
+            Console.WindowHeight = 10;
+            Console.WindowWidth = 20;
+            Console.BufferHeight = 10;
+            Console.BufferWidth = 20;
+
             while (true)
             {
 
@@ -82,10 +82,18 @@ namespace Tic_Tac_Toe
                         {
                             break;
                         }
+                        else if (command.Key == ConsoleKey.Escape)
+                        {
+                            return;
+                        }
                         Console.Clear();
                         DrawBoard(table);
                     }
-
+                    if (table[row,col]=='X'|| table[row, col] == 'O')
+                    {
+                        Console.WriteLine("Тhe seat is already taken!");
+                        continue;
+                    }
 
 
 
