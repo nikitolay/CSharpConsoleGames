@@ -52,7 +52,6 @@ namespace Tic_Tac_Toe
                     while (true)
                     {
                         DrawBoard(table);
-
                         ConsoleKeyInfo command = Console.ReadKey();
                         if (command.Key == ConsoleKey.UpArrow && IsInside(row - 1))
                         {
@@ -94,11 +93,26 @@ namespace Tic_Tac_Toe
                         Console.WriteLine("Тhe seat is already taken!");
                         continue;
                     }
+                    
+                    
                     table[row, col] = playerTurn;
                     firstPlayer++;
-                    
-
-
+                    int isThereWinner = WinnerCheck(table);
+                    if (isThereWinner==1)
+                    {
+                        Console.WriteLine($"Player '{playerTurn}' won!");
+                        break;
+                    }
+                    else if (isThereWinner == -1)
+                    {
+                        Console.WriteLine($"Player '{playerTurn}' won!");
+                        break;
+                    }
+                    else if(movesPlayed==9)
+                    {
+                        Console.WriteLine("Draw!");
+                        break;
+                    }
 
 
 
@@ -227,9 +241,6 @@ namespace Tic_Tac_Toe
                 return 0;
             }
         }
-        //static bool IsInside(int number)
-        //{
-        //    return numb
-        //}
+
     }
 }
