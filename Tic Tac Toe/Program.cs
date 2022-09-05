@@ -124,13 +124,21 @@ namespace Tic_Tac_Toe
 
                 }
 
-
-
-
-
-
+                Console.WriteLine("Rematch");
+                ConsoleKeyInfo clientResponse = Console.ReadKey();
+                if (clientResponse.Key ==ConsoleKey.Enter)
+                {
+                    
                 ResetArrows(table);
                 DrawBoard(table);
+                }
+                else
+                {
+                    return;
+                }
+
+
+
 
 
             }
