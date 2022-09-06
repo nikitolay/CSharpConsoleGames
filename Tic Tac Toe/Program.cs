@@ -103,7 +103,7 @@ namespace Tic_Tac_Toe
                         Console.Clear();
 
                     }
-                    if (table[row, col] == 'X' || table[row, col] == 'O')
+                    if (table[row, col] == 'X' || table[row, col] == 'О')
                     {
                         Console.WriteLine("Тhe seat is already taken!");
                         continue;
@@ -129,7 +129,7 @@ namespace Tic_Tac_Toe
                     }
                     else if (movesPlayed == 9)
                     {
-                        Console.SetCursorPosition(2, 5);
+                        Console.SetCursorPosition(8, 5);
                         Console.WriteLine("Draw!");
                         break;
                     }
@@ -142,7 +142,7 @@ namespace Tic_Tac_Toe
 
 
                 }
-                Console.SetCursorPosition(6, 6);
+                Console.SetCursorPosition(7, 6);
                 Console.WriteLine("Rematch?");
                 ConsoleKeyInfo clientResponse = Console.ReadKey();
                 if (clientResponse.Key == ConsoleKey.Enter)
