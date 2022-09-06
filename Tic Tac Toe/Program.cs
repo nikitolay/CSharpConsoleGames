@@ -49,8 +49,23 @@ namespace Tic_Tac_Toe
                     int row = 1;
                     int col = 1;
                     ResetArrows(table);
+                    Console.SetCursorPosition(1, 5);
+
+
                     while (true)
                     {
+                        Console.SetCursorPosition(1, 5);
+                        if (movesPlayed < 1)
+                        {
+                            Console.WriteLine($"First player is '{playerTurn}'");
+                        }
+                        else
+                        {
+
+                            Console.SetCursorPosition(1, 5);
+                            Console.WriteLine($"Player turn is '{playerTurn}'");
+                        }
+
                         DrawBoard(table);
                         ConsoleKeyInfo command = Console.ReadKey();
                         if (command.Key == ConsoleKey.UpArrow && IsInside(row - 1))
@@ -86,20 +101,21 @@ namespace Tic_Tac_Toe
                             return;
                         }
                         Console.Clear();
-                       
+
                     }
-                    if (table[row,col]=='X'|| table[row, col] == 'O')
+                    if (table[row, col] == 'X' || table[row, col] == 'O')
                     {
                         Console.WriteLine("Тhe seat is already taken!");
                         continue;
                     }
-                    
-                    
+
+                    movesPlayed++;
                     table[row, col] = playerTurn;
                     firstPlayer++;
                     int isThereWinner = WinnerCheck(table);
+                    Console.Clear();
                     DrawBoard(table);
-                    if (isThereWinner==1)
+                    if (isThereWinner == 1)
                     {
                         Console.WriteLine($"Player '{playerTurn}' won!");
                         break;
@@ -109,7 +125,7 @@ namespace Tic_Tac_Toe
                         Console.WriteLine($"Player '{playerTurn}' won!");
                         break;
                     }
-                    else if(movesPlayed==9)
+                    else if (movesPlayed == 9)
                     {
                         Console.WriteLine("Draw!");
                         break;
@@ -122,16 +138,15 @@ namespace Tic_Tac_Toe
 
 
 
-
                 }
-
-                Console.WriteLine("Rematch");
+                //Console.SetCursorPosition(2, 0);
+                Console.WriteLine("Rematch?");
                 ConsoleKeyInfo clientResponse = Console.ReadKey();
-                if (clientResponse.Key ==ConsoleKey.Enter)
+                if (clientResponse.Key == ConsoleKey.Enter)
                 {
-                    
-                ResetArrows(table);
-                DrawBoard(table);
+
+                    ResetArrows(table);
+                    DrawBoard(table);
                 }
                 else
                 {
@@ -211,9 +226,9 @@ namespace Tic_Tac_Toe
             }
 
             //Horizontal check if 'О' wins
-            if (table[1, 1] == '0' && table[1, 2] == 'О' && table[1, 3] == 'О')
+            if (table[1, 1] == 'О' && table[1, 2] == 'О' && table[1, 3] == 'О')
             {
-                return 1;
+                return -1;
             }
             else if (table[2, 1] == 'О' && table[2, 2] == 'О' && table[2, 3] == 'О')
             {
