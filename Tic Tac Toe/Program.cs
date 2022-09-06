@@ -63,7 +63,7 @@ namespace Tic_Tac_Toe
                         {
 
                             Console.SetCursorPosition(2, 5);
-                            Console.WriteLine($"Player turn is '{playerTurn}'");
+                            Console.WriteLine($"Player's '{playerTurn}' turn");
                         }
 
                         DrawBoard(table);
@@ -117,16 +117,19 @@ namespace Tic_Tac_Toe
                     DrawBoard(table);
                     if (isThereWinner == 1)
                     {
+                        Console.SetCursorPosition(3, 5);
                         Console.WriteLine($"Player '{playerTurn}' won!");
                         break;
                     }
                     else if (isThereWinner == -1)
                     {
+                        Console.SetCursorPosition(3, 5);
                         Console.WriteLine($"Player '{playerTurn}' won!");
                         break;
                     }
                     else if (movesPlayed == 9)
                     {
+                        Console.SetCursorPosition(2, 5);
                         Console.WriteLine("Draw!");
                         break;
                     }
@@ -139,7 +142,7 @@ namespace Tic_Tac_Toe
 
 
                 }
-                //Console.SetCursorPosition(2, 0);
+                Console.SetCursorPosition(6, 6);
                 Console.WriteLine("Rematch?");
                 ConsoleKeyInfo clientResponse = Console.ReadKey();
                 if (clientResponse.Key == ConsoleKey.Enter)
