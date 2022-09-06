@@ -49,7 +49,7 @@ namespace Tic_Tac_Toe
                     int row = 1;
                     int col = 1;
                     ResetArrows(table);
-                    Console.SetCursorPosition(1, 5);
+                    
 
 
                     while (true)
@@ -62,7 +62,7 @@ namespace Tic_Tac_Toe
                         else
                         {
 
-                            Console.SetCursorPosition(1, 5);
+                            Console.SetCursorPosition(2, 5);
                             Console.WriteLine($"Player turn is '{playerTurn}'");
                         }
 
