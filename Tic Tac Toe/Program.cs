@@ -40,7 +40,7 @@ namespace Tic_Tac_Toe
                 {
                     if (firstPlayer % 2 == 0)
                     {
-                        playerTurn = 'O';
+                        playerTurn = 'О';
                     }
                     else
                     {
@@ -86,7 +86,7 @@ namespace Tic_Tac_Toe
                             return;
                         }
                         Console.Clear();
-                        DrawBoard(table);
+                       
                     }
                     if (table[row,col]=='X'|| table[row, col] == 'O')
                     {
@@ -98,6 +98,7 @@ namespace Tic_Tac_Toe
                     table[row, col] = playerTurn;
                     firstPlayer++;
                     int isThereWinner = WinnerCheck(table);
+                    DrawBoard(table);
                     if (isThereWinner==1)
                     {
                         Console.WriteLine($"Player '{playerTurn}' won!");
@@ -220,7 +221,7 @@ namespace Tic_Tac_Toe
             }
             else if (table[3, 1] == 'О' && table[3, 2] == 'О' && table[3, 3] == 'О')
             {
-                return 1;
+                return -1;
             }
             //Vertical check if 'О' wins
             if (table[1, 1] == 'О' && table[2, 1] == 'О' && table[3, 1] == 'О')
@@ -229,7 +230,7 @@ namespace Tic_Tac_Toe
             }
             else if (table[1, 2] == 'О' && table[2, 2] == 'О' && table[3, 2] == 'О')
             {
-                return 1;
+                return -1;
             }
             else if (table[1, 3] == 'О' && table[2, 3] == 'О' && table[3, 3] == 'О')
             {
