@@ -61,7 +61,6 @@ namespace Tic_Tac_Toe
                         }
                         else
                         {
-
                             Console.SetCursorPosition(2, 5);
                             Console.WriteLine($"Player's '{playerTurn}' turn");
                         }
@@ -144,12 +143,15 @@ namespace Tic_Tac_Toe
                 }
                 Console.SetCursorPosition(7, 6);
                 Console.WriteLine("Rematch?");
+                if (!movesPlayed==9)
+                {
+                    Console.SetCursorPosition(3, 7);
+                    Console.WriteLine("Press 'Enter' for rematch");
+                }
                 ConsoleKeyInfo clientResponse = Console.ReadKey();
                 if (clientResponse.Key == ConsoleKey.Enter)
                 {
-
-                    ResetArrows(table);
-                    DrawBoard(table);
+                    continue;
                 }
                 else
                 {
