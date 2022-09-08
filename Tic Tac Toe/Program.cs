@@ -9,7 +9,7 @@ namespace Tic_Tac_Toe
         static void Main(string[] args)
         {
             char[,] table = new char[5, 5];
-            Console.Title = "Tic-Tac-Toe Game :";
+            Console.Title = "Tic-Tac-Toe Game";
             Console.OutputEncoding = Encoding.UTF8;
             Console.WindowHeight = 10;
             Console.WindowWidth = 20;
@@ -143,7 +143,7 @@ namespace Tic_Tac_Toe
                 }
                 Console.SetCursorPosition(7, 6);
                 Console.WriteLine("Rematch?");
-                if (!movesPlayed==9)
+                if (movesPlayed==9)
                 {
                     Console.SetCursorPosition(3, 7);
                     Console.WriteLine("Press 'Enter' for rematch");
