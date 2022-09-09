@@ -104,6 +104,7 @@ namespace Tic_Tac_Toe
                     }
                     if (table[row, col] == 'X' || table[row, col] == 'О')
                     {
+                        Console.SetCursorPosition(1, 6);
                         Console.WriteLine("Тhe seat is already taken!");
                         continue;
                     }
