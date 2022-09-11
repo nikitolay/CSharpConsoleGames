@@ -8,9 +8,21 @@ namespace Tic_Tac_Toe
 {
     internal class TicTacToe
     {
-        private const int rightArrowCol = 0, downArrowRow = 0;
         private char[,] table;
+        private const int rightArrowCol = 0, downArrowRow = 0;
+        private int movesPlayed = 0;
+        private Random randomPlayer;
+        private int firstPlayer;
+        private char playerTurn;
+        private int row = 1;
+        private int col = 1;
+        private int isThereWinner;
         public TicTacToe()
+        {
+
+            table = new char[5, 5];
+        }
+        private void ConsoleFormat()
         {
             Console.Title = "Tic-Tac-Toe Game";
             Console.OutputEncoding = Encoding.UTF8;
@@ -18,91 +30,53 @@ namespace Tic_Tac_Toe
             Console.WindowWidth = 20;
             Console.BufferHeight = 10;
             Console.BufferWidth = 20;
-            table = new char[5, 5];
         }
-        ConsoleColor ConsoleColor()
+        private ConsoleColor RandomConsoleColor()
         {
             Array values = Enum.GetValues(typeof(ConsoleColor));
             Random random = new Random();
             ConsoleColor randomColor = (ConsoleColor)values.GetValue(random.Next(6));
             return randomColor;
         }
-        void Start()
+        public void Start()
         {
+            ConsoleFormat();
             while (true)
             {
-
-                Console.BackgroundColor = ConsoleColor();
+                ConsoleColor randomColor = RandomConsoleColor();
+                Console.BackgroundColor = randomColor;
                 Console.Clear();
-                FillsTheTableWithEmptyChars();
-                int movesPlayed = 0;
-                Random randomPlayer = new Random();
-                int firstPlayer = randomPlayer.Next(0, 2);
-                char playerTurn = ' ';
+                FillsTheTableWithEmptyChars(table);
+                movesPlayed = 0;
+                randomPlayer = new Random();
+                firstPlayer = randomPlayer.Next(0, 2);
+                playerTurn = ' ';
 
                 while (true)
                 {
-                    if (firstPlayer % 2 == 0)
-                    {
-                        playerTurn = 'О';
-                    }
-                    else
-                    {
-                        playerTurn = 'X';
-                    }
-                    int row = 1;
-                    int col = 1;
+                    playerTurn = CheckPlayerTurn(movesPlayed, playerTurn);
+                    row = 1;
+                    col = 1;
                     ResetArrows(table);
 
 
 
                     while (true)
                     {
-                        Console.SetCursorPosition(1, 5);
-                        if (movesPlayed < 1)
-                        {
-                            Console.WriteLine($"First player is '{playerTurn}'");
-                        }
-                        else
-                        {
-                            Console.SetCursorPosition(2, 5);
-                            Console.WriteLine($"Player's '{playerTurn}' turn");
-                        }
+                        PrintWhichPlayerIsTurn(movesPlayed, playerTurn);
 
                         DrawBoard(table);
                         ConsoleKeyInfo command = Console.ReadKey();
-                        if (command.Key == ConsoleKey.UpArrow && IsInside(row - 1))
-                        {
-                            table[row, rightArrowCol] = ' ';
-                            row--;
-                            table[row, rightArrowCol] = '→';
-                        }
-                        else if (command.Key == ConsoleKey.DownArrow && IsInside(row + 1))
-                        {
-                            table[row, rightArrowCol] = ' ';
-                            row++;
-                            table[row, rightArrowCol] = '→';
-                        }
-                        else if (command.Key == ConsoleKey.LeftArrow && IsInside(col - 1))
-                        {
-                            table[downArrowRow, col] = ' ';
-                            col--;
-                            table[downArrowRow, col] = '↓';
-                        }
-                        else if (command.Key == ConsoleKey.RightArrow && IsInside(col + 1))
-                        {
-                            table[downArrowRow, col] = ' ';
-                            col++;
-                            table[downArrowRow, col] = '↓';
-                        }
-                        else if (command.Key == ConsoleKey.Enter)
+                        int ArrowsMovedSuccessfully = MoveArrows(table,command,ref row,ref col);
+                        if (ArrowsMovedSuccessfully==1)
                         {
                             break;
                         }
-                        else if (command.Key == ConsoleKey.Escape)
+                        else if (ArrowsMovedSuccessfully==-1)
                         {
                             return;
                         }
+                        
                         Console.Clear();
 
                     }
@@ -118,7 +92,7 @@ namespace Tic_Tac_Toe
                     movesPlayed++;
                     table[row, col] = playerTurn;
                     firstPlayer++;
-                    int isThereWinner = WinnerCheck(table);
+                    isThereWinner = WinnerCheck(table);
                     Console.Clear();
                     DrawBoard(table);
                     if (isThereWinner == 1)
@@ -172,7 +146,74 @@ namespace Tic_Tac_Toe
             }
         }
 
-        private void FillsTheTableWithEmptyChars()
+        private int MoveArrows(char[,] table, ConsoleKeyInfo command,ref int row, ref int col)
+        {
+            
+            if (command.Key == ConsoleKey.UpArrow && IsInside(row - 1))
+            {
+                table[row, rightArrowCol] = ' ';
+                row--;
+                table[row, rightArrowCol] = '→';
+
+            }
+            else if (command.Key == ConsoleKey.DownArrow && IsInside(row + 1))
+            {
+                table[row, rightArrowCol] = ' ';
+                row++;
+                table[row, rightArrowCol] = '→';
+            }
+            else if (command.Key == ConsoleKey.LeftArrow && IsInside(col - 1))
+            {
+                table[downArrowRow, col] = ' ';
+                col--;
+                table[downArrowRow, col] = '↓';
+            }
+            else if (command.Key == ConsoleKey.RightArrow && IsInside(col + 1))
+            {
+                table[downArrowRow, col] = ' ';
+                col++;
+                table[downArrowRow, col] = '↓';
+            }
+            else if (command.Key == ConsoleKey.Enter)
+            {
+                return 1;
+                
+            }
+            else if (command.Key == ConsoleKey.Escape)
+            {
+                return -1;
+            }
+            return 0;
+        }
+
+        private void PrintWhichPlayerIsTurn(int movesPlayed, char playerTurn)
+        {
+            Console.SetCursorPosition(1, 5);
+            if (movesPlayed < 1)
+            {
+                Console.WriteLine($"First player is '{playerTurn}'");
+            }
+            else
+            {
+                Console.SetCursorPosition(2, 5);
+                Console.WriteLine($"Player's '{playerTurn}' turn");
+            }
+        }
+
+        private char CheckPlayerTurn(int movesPlayed, char playerTurn)
+        {
+            if (firstPlayer % 2 == 0)
+            {
+                playerTurn = 'О';
+            }
+            else
+            {
+                playerTurn = 'X';
+            }
+            return playerTurn;
+        }
+
+        private void FillsTheTableWithEmptyChars(char[,] table)
         {
             for (int i = 0; i < table.GetLength(0); i++) // Fills the table with empty chars for easier showing on the console.
             {
@@ -182,6 +223,112 @@ namespace Tic_Tac_Toe
                 }
             }
         }
+        private void DrawBoard(char[,] table)
+        {
+            Console.SetCursorPosition(6, 0);
+            Console.WriteLine($"{table[0, 1]}   {table[0, 2]}   {table[0, 3]} ");
+            Console.SetCursorPosition(2, 1);
+            Console.WriteLine($"{table[1, 0]} | {table[1, 1]} | {table[1, 2]} | {table[1, 3]} |");
+            Console.SetCursorPosition(2, 2);
+
+            Console.WriteLine($"{table[2, 0]} | {table[2, 1]} | {table[2, 2]} | {table[2, 3]} |");
+            Console.SetCursorPosition(2, 3);
+
+            Console.WriteLine($"{table[3, 0]} | {table[3, 1]} | {table[3, 2]} | {table[3, 3]} |");
+        }
+        private void ResetArrows(char[,] table)
+        {
+            table[0, 1] = '↓';
+            table[0, 2] = ' ';
+            table[0, 3] = ' ';
+
+            table[1, 0] = '→';
+            table[2, 0] = ' ';
+            table[3, 0] = ' ';
+
+        }
+        static bool IsInside(int number)
+        {
+            return number >= 1 && number <= 3;
+        }
+        private int WinnerCheck(char[,] table)
+        {
+            //Horizontal check if 'X' wins
+            if (table[1, 1] == 'X' && table[1, 2] == 'X' && table[1, 3] == 'X')
+            {
+                return 1;
+            }
+            else if (table[2, 1] == 'X' && table[2, 2] == 'X' && table[2, 3] == 'X')
+            {
+                return 1;
+            }
+            else if (table[3, 1] == 'X' && table[3, 2] == 'X' && table[3, 3] == 'X')
+            {
+                return 1;
+            }
+            //Vertical check if 'X' wins
+            if (table[1, 1] == 'X' && table[2, 1] == 'X' && table[3, 1] == 'X')
+            {
+                return 1;
+            }
+            else if (table[1, 2] == 'X' && table[2, 2] == 'X' && table[3, 2] == 'X')
+            {
+                return 1;
+            }
+            else if (table[1, 3] == 'X' && table[2, 3] == 'X' && table[3, 3] == 'X')
+            {
+                return 1;
+            }
+            //Тhe two diagonals check if 'X' wins
+            else if (table[1, 1] == 'X' && table[2, 2] == 'X' && table[3, 3] == 'X')
+            {
+                return 1;
+            }
+            else if (table[1, 3] == 'X' && table[2, 2] == 'X' && table[3, 1] == 'X')
+            {
+                return 1;
+            }
+
+            //Horizontal check if 'О' wins
+            if (table[1, 1] == 'О' && table[1, 2] == 'О' && table[1, 3] == 'О')
+            {
+                return -1;
+            }
+            else if (table[2, 1] == 'О' && table[2, 2] == 'О' && table[2, 3] == 'О')
+            {
+                return -1;
+            }
+            else if (table[3, 1] == 'О' && table[3, 2] == 'О' && table[3, 3] == 'О')
+            {
+                return -1;
+            }
+            //Vertical check if 'О' wins
+            if (table[1, 1] == 'О' && table[2, 1] == 'О' && table[3, 1] == 'О')
+            {
+                return -1;
+            }
+            else if (table[1, 2] == 'О' && table[2, 2] == 'О' && table[3, 2] == 'О')
+            {
+                return -1;
+            }
+            else if (table[1, 3] == 'О' && table[2, 3] == 'О' && table[3, 3] == 'О')
+            {
+                return -1;
+            }
+            //Тhe two diagonals check if 'О' wins
+            else if (table[1, 1] == 'О' && table[2, 2] == 'О' && table[3, 3] == 'О')
+            {
+                return -1;
+            }
+            else if (table[1, 3] == 'О' && table[2, 2] == 'О' && table[3, 1] == 'О')
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }
-}
+
