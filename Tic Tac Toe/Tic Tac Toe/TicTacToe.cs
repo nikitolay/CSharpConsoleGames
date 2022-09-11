@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,8 +20,8 @@ namespace Tic_Tac_Toe
         private int isThereWinner;
         public TicTacToe()
         {
-
             table = new char[5, 5];
+            randomPlayer = new Random();
         }
         private void ConsoleFormat()
         {
@@ -48,7 +49,6 @@ namespace Tic_Tac_Toe
                 Console.Clear();
                 FillsTheTableWithEmptyChars(table);
                 movesPlayed = 0;
-                randomPlayer = new Random();
                 firstPlayer = randomPlayer.Next(0, 2);
                 playerTurn = ' ';
 
@@ -59,28 +59,25 @@ namespace Tic_Tac_Toe
                     col = 1;
                     ResetArrows(table);
 
-
-
                     while (true)
                     {
                         PrintWhichPlayerIsTurn(movesPlayed, playerTurn);
 
                         DrawBoard(table);
                         ConsoleKeyInfo command = Console.ReadKey();
-                        int ArrowsMovedSuccessfully = MoveArrows(table,command,ref row,ref col);
-                        if (ArrowsMovedSuccessfully==1)
+                        int ArrowsMovedSuccessfully = MoveArrows(table, command, ref row, ref col);
+                        if (ArrowsMovedSuccessfully == 1)
                         {
                             break;
                         }
-                        else if (ArrowsMovedSuccessfully==-1)
+                        else if (ArrowsMovedSuccessfully == -1)
                         {
                             return;
                         }
-                        
                         Console.Clear();
-
                     }
-                    if (table[row, col] == 'X' || table[row, col] == 'О')
+                    bool IsTakenTheSelectedSeat = CheckingIfTheSeatIsOccupied(table, row, col);
+                    if (IsTakenTheSelectedSeat)
                     {
                         Console.SetCursorPosition(1, 6);
                         Console.BackgroundColor = ConsoleColor.DarkRed;
@@ -88,6 +85,7 @@ namespace Tic_Tac_Toe
                         Console.BackgroundColor = randomColor;
                         continue;
                     }
+
 
                     movesPlayed++;
                     table[row, col] = playerTurn;
@@ -138,17 +136,17 @@ namespace Tic_Tac_Toe
                 {
                     return;
                 }
-
-
-
-
-
             }
         }
 
-        private int MoveArrows(char[,] table, ConsoleKeyInfo command,ref int row, ref int col)
+        private bool CheckingIfTheSeatIsOccupied(char[,] table, int row, int col)
         {
-            
+            return table[row, col] == 'X' || table[row, col] == 'О';
+        }
+
+        private int MoveArrows(char[,] table, ConsoleKeyInfo command, ref int row, ref int col)
+        {
+
             if (command.Key == ConsoleKey.UpArrow && IsInside(row - 1))
             {
                 table[row, rightArrowCol] = ' ';
@@ -177,7 +175,7 @@ namespace Tic_Tac_Toe
             else if (command.Key == ConsoleKey.Enter)
             {
                 return 1;
-                
+
             }
             else if (command.Key == ConsoleKey.Escape)
             {
