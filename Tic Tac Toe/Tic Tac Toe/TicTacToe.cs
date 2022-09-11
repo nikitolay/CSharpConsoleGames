@@ -25,7 +25,7 @@ namespace Tic_Tac_Toe
         }
         private void ConsoleFormat()
         {
-            Console.Title = "Tic-Tac-Toe Game";
+            Console.Title = "Tic-Tac-Toe Game ❤";
             Console.OutputEncoding = Encoding.UTF8;
             Console.WindowHeight = 10;
             Console.WindowWidth = 20;
@@ -111,13 +111,6 @@ namespace Tic_Tac_Toe
                         Console.WriteLine("Draw!");
                         break;
                     }
-
-
-
-
-
-
-
 
                 }
                 Console.SetCursorPosition(7, 6);
@@ -223,8 +216,9 @@ namespace Tic_Tac_Toe
         }
         private void DrawBoard(char[,] table)
         {
+
             Console.SetCursorPosition(6, 0);
-            Console.WriteLine($"{table[0, 1]}   {table[0, 2]}   {table[0, 3]} ");
+            Console.WriteLine($"{table[0, 1]}   {table[0, 2]}   {table[0, 3]}");
             Console.SetCursorPosition(2, 1);
             Console.WriteLine($"{table[1, 0]} | {table[1, 1]} | {table[1, 2]} | {table[1, 3]} |");
             Console.SetCursorPosition(2, 2);
