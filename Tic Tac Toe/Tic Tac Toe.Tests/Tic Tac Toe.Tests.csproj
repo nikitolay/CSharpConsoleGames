@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tic Tac Toe\Tic Tac Toe.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Tic_Tac_Toe
 {
-    internal class TicTacToe
+   public class TicTacToe
     {
-        private char[,] table;
+        private readonly char[,] table;
         private const int rightArrowCol = 0, downArrowRow = 0;
         private int movesPlayed = 0;
         private Random randomPlayer;
@@ -23,6 +23,7 @@ namespace Tic_Tac_Toe
             table = new char[5, 5];
             randomPlayer = new Random();
         }
+        public int Table => table.GetLength(0);
         private void ConsoleFormat()
         {
             Console.Title = "Tic-Tac-Toe Game ❤";
