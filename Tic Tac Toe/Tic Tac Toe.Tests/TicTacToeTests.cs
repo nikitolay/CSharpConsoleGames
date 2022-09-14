@@ -10,5 +10,7 @@ namespace Tic_Tac_Toe.Tests
             TicTacToe game = new TicTacToe();
             Assert.NotNull(game.Table);
         }
+        [Fact]
+
     }
 }
