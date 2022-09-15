@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("Tic Tac Toe.Tests")]
 
 namespace Tic_Tac_Toe
 {
-   public class TicTacToe
+    public class TicTacToe
     {
         private readonly char[,] table;
         private const int rightArrowCol = 0, downArrowRow = 0;
@@ -133,7 +136,7 @@ namespace Tic_Tac_Toe
             }
         }
 
-        private bool CheckingIfTheSeatIsOccupied(char[,] table, int row, int col)
+        internal bool CheckingIfTheSeatIsOccupied(char[,] table, int row, int col)
         {
             return table[row, col] == 'X' || table[row, col] == 'О';
         }

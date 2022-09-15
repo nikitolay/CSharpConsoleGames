@@ -1,3 +1,4 @@
+
 using System;
 
 namespace Tic_Tac_Toe.Tests
@@ -11,6 +12,20 @@ namespace Tic_Tac_Toe.Tests
             Assert.NotNull(game.Table);
         }
         [Fact]
+        public void MethodShouldReturnTrueIfTheSeatIsOccupied()
+        {
+            TicTacToe game = new TicTacToe();
+            char[,] table =
+            {
+                { ' ',' ',' ',' ',' '}
+                ,
+                { ' ','X',' ',' ',' '}
+            };
+            int row = 1;
+            int col = 1;
+            bool isOccupied = game.CheckingIfTheSeatIsOccupied(table, row, col);
+            Assert.True(isOccupied);
+        }
 
     }
 }
