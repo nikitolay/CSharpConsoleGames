@@ -5,17 +5,17 @@ namespace Tic_Tac_Toe.Tests
 {
     public class TicTacToeTests
     {
-        static char[,] table =
-             {
-                { ' ',' ',' ',' ',' '}
-                ,
-                { ' ','X',' ',' ',' '}
-            };
+        char[,] table;
+        TicTacToe game;
+        public TicTacToeTests()
+        {
+            game = new TicTacToe();
+            table = new char[5, 5];
+        }
 
         [Fact]
         public void TestMatrixInitializationInConstructor()
         {
-            TicTacToe game = new TicTacToe();
             Assert.NotNull(game.Table);
         }
 
@@ -47,24 +47,25 @@ namespace Tic_Tac_Toe.Tests
         [InlineData('О', 3, 3)]
         public void MethodShouldReturnTrueIfTheSeatIsOccupied(char symbol, int row, int col)
         {//da dobavq oshte case-ove tuk
-            TicTacToe game = new TicTacToe();
-            char[,] table =
-            {
 
-                { ' ',' ',' ',' ',' '}
-                ,
-                { ' ',' ',' ',' ',' '}
-                ,
-                { ' ',' ',' ',' ',' '}
-                ,
-                { ' ',' ',' ',' ',' '}
-                ,
-                { ' ',' ',' ',' ',' '}
-            };
             table[row, col] = symbol;
             bool isOccupied = game.CheckingIfTheSeatIsOccupied(table, row, col);
             Assert.True(isOccupied);
         }
 
+
+        // [Theory]
+        //[Fact]
+        //public void jkhjgjgk()
+        //{
+        //    ConsoleKeyInfo command= Console.ReadKey();
+
+        //   int row = 1;
+        // int   col = 1;
+        //    game.MoveArrows(table,UpArrow, ref row,ref col);
+        //}
+
+        [Fact]
+        
     }
 }

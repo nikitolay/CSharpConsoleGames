@@ -141,7 +141,7 @@ namespace Tic_Tac_Toe
             return table[row, col] == 'X' || table[row, col] == 'О';
         }
 
-        private int MoveArrows(char[,] table, ConsoleKeyInfo command, ref int row, ref int col)
+        internal int MoveArrows(char[,] table, ConsoleKeyInfo command, ref int row, ref int col)
         {
 
             if (command.Key == ConsoleKey.UpArrow && IsInside(row - 1))
@@ -181,7 +181,7 @@ namespace Tic_Tac_Toe
             return 0;
         }
 
-        private void PrintWhichPlayerIsTurn(int movesPlayed, char playerTurn)
+        private char PrintWhichPlayerIsTurn(int movesPlayed, char playerTurn)
         {
             Console.SetCursorPosition(1, 5);
             if (movesPlayed < 1)
@@ -193,6 +193,7 @@ namespace Tic_Tac_Toe
                 Console.SetCursorPosition(2, 5);
                 Console.WriteLine($"Player's '{playerTurn}' turn");
             }
+            return playerTurn;
         }
 
         private char CheckPlayerTurn(int movesPlayed, char playerTurn)
