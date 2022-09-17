@@ -1,6 +1,4 @@
 ﻿
-using System;
-
 namespace Tic_Tac_Toe.Tests
 {
     public class TicTacToeTests
@@ -57,15 +55,13 @@ namespace Tic_Tac_Toe.Tests
         [Theory]
         [InlineData(1, 'X')]
         [InlineData(2, 'О')]
-        public void TheMethodChecksIfThePlayerTurnIsChangedCorrectly(int movesPLayed,char expectedSymbol)
+        public void TheMethodChecksIfThePlayerTurnIsChangedCorrectly(int movesPLayed, char expectedSymbol)
         {
-
-           char playerTurn= game.CheckPlayerTurn(movesPLayed);
-
+            char playerTurn = game.CheckPlayerTurn(movesPLayed);
             Assert.Equal(expectedSymbol, playerTurn);
         }
 
         // [Fact]
 
-    } 
+    }
 }
