@@ -54,18 +54,18 @@ namespace Tic_Tac_Toe.Tests
         }
 
 
-        // [Theory]
-        //[Fact]
-        //public void jkhjgjgk()
-        //{
-        //    ConsoleKeyInfo command= Console.ReadKey();
+        [Theory]
+        [InlineData(1, 'X')]
+        [InlineData(2, 'О')]
+        public void TheMethodChecksIfThePlayerTurnIsChangedCorrectly(int movesPLayed,char expectedSymbol)
+        {
 
-        //   int row = 1;
-        // int   col = 1;
-        //    game.MoveArrows(table,UpArrow, ref row,ref col);
-        //}
+           char playerTurn= game.CheckPlayerTurn(movesPLayed);
 
-        [Fact]
-        
-    }
+            Assert.Equal(expectedSymbol, playerTurn);
+        }
+
+        // [Fact]
+
+    } 
 }

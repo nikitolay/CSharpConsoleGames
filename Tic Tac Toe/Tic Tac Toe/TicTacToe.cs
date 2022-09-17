@@ -17,7 +17,8 @@ namespace Tic_Tac_Toe
         private int movesPlayed = 0;
         private Random randomPlayer;
         private int firstPlayer;
-        private char playerTurn;
+        private char playerTurnSymbol;
+        private int playerTurnDigit;
         private int row = 1;
         private int col = 1;
         private int isThereWinner;
@@ -54,18 +55,19 @@ namespace Tic_Tac_Toe
                 FillsTheTableWithEmptyChars(table);
                 movesPlayed = 0;
                 firstPlayer = randomPlayer.Next(0, 2);
-                playerTurn = ' ';
+                playerTurnDigit= firstPlayer;
+                playerTurnSymbol = ' ';
 
                 while (true)
                 {
-                    playerTurn = CheckPlayerTurn(movesPlayed, playerTurn);
+                    playerTurnSymbol = CheckPlayerTurn(playerTurnDigit);
                     row = 1;
                     col = 1;
                     ResetArrows(table);
 
                     while (true)
                     {
-                        PrintWhichPlayerIsTurn(movesPlayed, playerTurn);
+                        PrintWhichPlayerIsTurn(movesPlayed, playerTurnSymbol);
 
                         DrawBoard(table);
                         ConsoleKeyInfo command = Console.ReadKey();
@@ -92,21 +94,15 @@ namespace Tic_Tac_Toe
 
 
                     movesPlayed++;
-                    table[row, col] = playerTurn;
-                    firstPlayer++;
+                    playerTurnDigit++;
+                    table[row, col] = playerTurnSymbol;
                     isThereWinner = WinnerCheck(table);
                     Console.Clear();
                     DrawBoard(table);
-                    if (isThereWinner == 1)
+                    if (isThereWinner == 1|| isThereWinner == -1)
                     {
                         Console.SetCursorPosition(3, 5);
-                        Console.WriteLine($"Player '{playerTurn}' won!");
-                        break;
-                    }
-                    else if (isThereWinner == -1)
-                    {
-                        Console.SetCursorPosition(3, 5);
-                        Console.WriteLine($"Player '{playerTurn}' won!");
+                        Console.WriteLine($"Player '{playerTurnSymbol}' won!");
                         break;
                     }
                     else if (movesPlayed == 9)
@@ -141,7 +137,7 @@ namespace Tic_Tac_Toe
             return table[row, col] == 'X' || table[row, col] == 'О';
         }
 
-        internal int MoveArrows(char[,] table, ConsoleKeyInfo command, ref int row, ref int col)
+        private int MoveArrows(char[,] table, ConsoleKeyInfo command, ref int row, ref int col)
         {
 
             if (command.Key == ConsoleKey.UpArrow && IsInside(row - 1))
@@ -181,7 +177,7 @@ namespace Tic_Tac_Toe
             return 0;
         }
 
-        private char PrintWhichPlayerIsTurn(int movesPlayed, char playerTurn)
+        private void PrintWhichPlayerIsTurn(int movesPlayed, char playerTurn)
         {
             Console.SetCursorPosition(1, 5);
             if (movesPlayed < 1)
@@ -193,20 +189,19 @@ namespace Tic_Tac_Toe
                 Console.SetCursorPosition(2, 5);
                 Console.WriteLine($"Player's '{playerTurn}' turn");
             }
-            return playerTurn;
         }
 
-        private char CheckPlayerTurn(int movesPlayed, char playerTurn)
+        internal char CheckPlayerTurn(int firstPlayer)
         {
             if (firstPlayer % 2 == 0)
             {
-                playerTurn = 'О';
+                playerTurnSymbol = 'О';
             }
             else
             {
-                playerTurn = 'X';
+                playerTurnSymbol = 'X';
             }
-            return playerTurn;
+            return playerTurnSymbol;
         }
 
         private void FillsTheTableWithEmptyChars(char[,] table)
