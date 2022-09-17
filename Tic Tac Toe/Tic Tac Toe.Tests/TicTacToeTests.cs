@@ -96,10 +96,19 @@ namespace Tic_Tac_Toe.Tests
         [Theory]
         [InlineData('↓',0,1)]
         [InlineData('→', 1,0)]
-        public void hg(char symbol,int row,int col)
+        public void ChecksThatTheArrowsAreInTheirStartingPositions(char symbol,int row,int col)
         {
             game.ResetArrows(table);
             Assert.Equal(symbol, table[row, col]);
+        }
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        public void ChecksIfWeAreMovingInsideTheTable(int number)
+        {
+            Assert.True(game.IsInside(number));
         }
     }
 }

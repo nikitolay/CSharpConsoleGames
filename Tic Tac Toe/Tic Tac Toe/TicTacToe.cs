@@ -239,7 +239,7 @@ namespace Tic_Tac_Toe
             table[3, 0] = ' ';
 
         }
-        static bool IsInside(int number)
+        internal bool IsInside(int number)
         {
             return number >= 1 && number <= 3;
         }
