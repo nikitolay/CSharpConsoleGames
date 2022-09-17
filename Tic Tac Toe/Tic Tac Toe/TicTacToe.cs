@@ -204,7 +204,7 @@ namespace Tic_Tac_Toe
             return playerTurnSymbol;
         }
 
-        private void FillsTheTableWithEmptyChars(char[,] table)
+        internal void FillsTheTableWithEmptyChars(char[,] table)
         {
             for (int i = 0; i < table.GetLength(0); i++) // Fills the table with empty chars for easier showing on the console.
             {
@@ -228,7 +228,7 @@ namespace Tic_Tac_Toe
 
             Console.WriteLine($"{table[3, 0]} | {table[3, 1]} | {table[3, 2]} | {table[3, 3]} |");
         }
-        private void ResetArrows(char[,] table)
+        internal void ResetArrows(char[,] table)
         {
             table[0, 1] = '↓';
             table[0, 2] = ' ';
