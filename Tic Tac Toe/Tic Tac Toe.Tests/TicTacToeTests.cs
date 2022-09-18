@@ -94,9 +94,9 @@ namespace Tic_Tac_Toe.Tests
         }
 
         [Theory]
-        [InlineData('↓',0,1)]
-        [InlineData('→', 1,0)]
-        public void ChecksThatTheArrowsAreInTheirStartingPositions(char symbol,int row,int col)
+        [InlineData('↓', 0, 1)]
+        [InlineData('→', 1, 0)]
+        public void ChecksThatTheArrowsAreInTheirStartingPositions(char symbol, int row, int col)
         {
             game.ResetArrows(table);
             Assert.Equal(symbol, table[row, col]);
@@ -110,5 +110,43 @@ namespace Tic_Tac_Toe.Tests
         {
             Assert.True(game.IsInside(number));
         }
+
+
+        [Theory]
+        //Horizontal check if 'X' wins
+        [InlineData('X', 1, 1, 1, 1, 2, 1, 3)]
+        [InlineData('X', 1, 2, 1, 2, 2, 2, 3)]
+        [InlineData('X', 1, 3, 1, 3, 2, 3, 3)]
+        //Vertical check if 'X' wins
+        [InlineData('X', 1, 1, 1, 2, 1, 3, 1)]
+        [InlineData('X', 1, 1, 2, 2, 2, 3, 2)]
+        [InlineData('X', 1, 1, 3, 2, 3, 3, 3)]
+        //Тhe two diagonals check if 'X' wins
+        [InlineData('X', 1, 1, 1, 2, 2, 3, 3)]
+        [InlineData('X', 1, 1, 3, 2, 2, 3, 1)]
+
+        //Horizontal check if 'О' wins
+        [InlineData('О', -1, 1, 1, 1, 2, 1, 3)]
+        [InlineData('О', -1, 2, 1, 2, 2, 2, 3)]
+        [InlineData('О', -1, 3, 1, 3, 2, 3, 3)]
+        //Vertical check if 'О' wins
+        [InlineData('О', -1, 1, 1, 2, 1, 3, 1)]
+        [InlineData('О', -1, 1, 2, 2, 2, 3, 2)]
+        [InlineData('О', -1, 1, 3, 2, 3, 3, 3)]
+        //Тhe two diagonals check if 'О' wins
+        [InlineData('О', -1, 1, 1, 2, 2, 3, 3)]
+        [InlineData('О', -1, 1, 3, 2, 2, 3, 1)]
+
+        //Оtherwise if there is no winner returns 0
+        [InlineData('О', 0, 1, 1, 1, 2, 3, 1)]
+        public void CheckingIfAnyPlayerWins(char symbol, int expected, params int[] array)
+        {
+            table[array[0], array[1]] = symbol;
+            table[array[2], array[3]] = symbol;
+            table[array[4], array[5]] = symbol;
+            int result = game.WinnerCheck(table);
+            Assert.Equal(expected, result);
+        }
+
     }
 }

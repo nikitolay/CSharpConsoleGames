@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake", "Snake\Snake\Snake.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tic Tac Toe", "Tic Tac Toe\Tic Tac Toe\Tic Tac Toe.csproj", "{D55D4929-F8C3-4060-8082-CBA88CAEC524}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tic Tac Toe.Tests", "Tic Tac Toe\Tic Tac Toe.Tests\Tic Tac Toe.Tests.csproj", "{6A0A19C5-DA8B-4953-B148-941E6621EE07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tic Tac Toe.Tests", "Tic Tac Toe\Tic Tac Toe.Tests\Tic Tac Toe.Tests.csproj", "{6A0A19C5-DA8B-4953-B148-941E6621EE07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Snake", "Snake", "{A7863F76-C02D-4449-A976-775EE9605993}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tic Tac Toe", "Tic Tac Toe", "{94AB478B-7C3E-40CD-B9A3-95AE4982AD89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +34,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ACC75A08-3F8F-4A8B-8577-52DF1F27EDF6} = {A7863F76-C02D-4449-A976-775EE9605993}
+		{D55D4929-F8C3-4060-8082-CBA88CAEC524} = {94AB478B-7C3E-40CD-B9A3-95AE4982AD89}
+		{6A0A19C5-DA8B-4953-B148-941E6621EE07} = {94AB478B-7C3E-40CD-B9A3-95AE4982AD89}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B54C34E9-8DD4-4445-AF89-4BFA80E95E5E}

@@ -243,7 +243,7 @@ namespace Tic_Tac_Toe
         {
             return number >= 1 && number <= 3;
         }
-        private int WinnerCheck(char[,] table)
+        internal int WinnerCheck(char[,] table)
         {
             //Horizontal check if 'X' wins
             if (table[1, 1] == 'X' && table[1, 2] == 'X' && table[1, 3] == 'X')
