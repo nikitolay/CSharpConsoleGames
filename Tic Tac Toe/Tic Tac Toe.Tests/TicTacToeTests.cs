@@ -3,8 +3,8 @@ namespace Tic_Tac_Toe.Tests
 {
     public class TicTacToeTests
     {
-        char[,] table;
-        TicTacToe game;
+        private char[,] table;
+        private TicTacToe game;
         public TicTacToeTests()
         {
             game = new TicTacToe();
