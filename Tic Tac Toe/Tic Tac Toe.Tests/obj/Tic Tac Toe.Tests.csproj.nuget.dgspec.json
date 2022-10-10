@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.Tests\\Tic Tac Toe.Tests.csproj": {}
+    "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.Tests\\Tic Tac Toe.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.Tests\\Tic Tac Toe.Tests.csproj": {
+    "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.Tests\\Tic Tac Toe.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.Tests\\Tic Tac Toe.Tests.csproj",
+        "projectUniqueName": "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.Tests\\Tic Tac Toe.Tests.csproj",
         "projectName": "Tic Tac Toe.Tests",
-        "projectPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.Tests\\Tic Tac Toe.Tests.csproj",
+        "projectPath": "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.Tests\\Tic Tac Toe.Tests.csproj",
         "packagesPath": "C:\\Users\\nikor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.Tests\\obj\\",
+        "outputPath": "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nikor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe\\Tic Tac Toe.csproj": {
-                "projectPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe\\Tic Tac Toe.csproj"
+              "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe\\Tic Tac Toe.csproj": {
+                "projectPath": "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe\\Tic Tac Toe.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe\\Tic Tac Toe.csproj": {
+    "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe\\Tic Tac Toe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe\\Tic Tac Toe.csproj",
+        "projectUniqueName": "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe\\Tic Tac Toe.csproj",
         "projectName": "Tic Tac Toe",
-        "projectPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe\\Tic Tac Toe.csproj",
+        "projectPath": "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe\\Tic Tac Toe.csproj",
         "packagesPath": "C:\\Users\\nikor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe\\obj\\",
+        "outputPath": "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nikor\\AppData\\Roaming\\NuGet\\NuGet.Config",

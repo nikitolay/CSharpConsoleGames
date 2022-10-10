@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pq7OrCh3RTe/UFGKYfW9wSajGuQ/XdbOlbcnVQf2QjlRi1uXF6wjKQN6ckUfvxPxSzUyn2b0RjXSdWV3cdjmnQ==",
+  "dgSpecHash": "TOzoK6Dbg96OkJsgNj6TRmeoFYKHChO7c3mY9JWpIQ/eGHaXm7cmiYLpLHA/t+qhHrzCKiiD0KiQW9uphEI5Xg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.Tests\\Tic Tac Toe.Tests.csproj",
+  "projectFilePath": "C:\\git\\CSharpConsoleGames\\Tic Tac Toe\\Tic Tac Toe.Tests\\Tic Tac Toe.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nikor\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\nikor\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

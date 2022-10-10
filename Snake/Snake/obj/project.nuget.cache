@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nYGUrKJ+33RQP09fVobyYit6Rtbzebu5DTfI4kJe/dQL661wU7G61Ga+GDnvYfqySbzWUY5Zzu6zx4oL5pIFJg==",
+  "dgSpecHash": "yB8rlb36KXUYXhyxYJ9CJR/kIBIVrXUvX9AjQk7At7nZwIgQwsKHZF0W3T97TviBfYJVrCSicGS+F1HOwbiAFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Snake\\Snake\\Snake.csproj",
+  "projectFilePath": "C:\\git\\CSharpConsoleGames\\Snake\\Snake\\Snake.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Snake\\Snake\\Snake.csproj",
+      "projectUniqueName": "C:\\git\\CSharpConsoleGames\\Snake\\Snake\\Snake.csproj",
       "projectName": "Snake",
-      "projectPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Snake\\Snake\\Snake.csproj",
+      "projectPath": "C:\\git\\CSharpConsoleGames\\Snake\\Snake\\Snake.csproj",
       "packagesPath": "C:\\Users\\nikor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nikor\\source\\repos\\CSharpConsoleGames\\Snake\\Snake\\obj\\",
+      "outputPath": "C:\\git\\CSharpConsoleGames\\Snake\\Snake\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nikor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
