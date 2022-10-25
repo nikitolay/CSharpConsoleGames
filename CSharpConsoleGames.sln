@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake", "Snake\Snake\Snake.csproj", "{ACC75A08-3F8F-4A8B-8577-52DF1F27EDF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnakeGame", "Snake\Snake\SnakeGame.csproj", "{ACC75A08-3F8F-4A8B-8577-52DF1F27EDF6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tic Tac Toe", "Tic Tac Toe\Tic Tac Toe\Tic Tac Toe.csproj", "{D55D4929-F8C3-4060-8082-CBA88CAEC524}"
 EndProject

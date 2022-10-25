@@ -1,15 +1,18 @@
 ﻿using Snake.GameObjects;
 using Snake.Utilities;
+using SnakeGame.Core;
 
-namespace Snake
+namespace SnakeGame
 {
-    internal class StartUp
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             ConsoleWindow.CustomizeConsole();
             Wall wall = new Wall(60, 20);
-            Console.ReadKey();
+            Snnake snake = new Snnake(wall);
+            Engine engine = new Engine(snake, wall);
+            engine.Run();
         }
     }
 }

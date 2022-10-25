@@ -1,0 +1,15 @@
+C:\git\CSharpConsoleGames\Snake\Snake\obj\Debug\net6.0\SnakeGame.csproj.AssemblyReference.cache
+C:\git\CSharpConsoleGames\Snake\Snake\obj\Debug\net6.0\SnakeGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\CSharpConsoleGames\Snake\Snake\obj\Debug\net6.0\SnakeGame.AssemblyInfoInputs.cache
+C:\git\CSharpConsoleGames\Snake\Snake\obj\Debug\net6.0\SnakeGame.AssemblyInfo.cs
+C:\git\CSharpConsoleGames\Snake\Snake\obj\Debug\net6.0\SnakeGame.csproj.CoreCompileInputs.cache
+C:\git\CSharpConsoleGames\Snake\Snake\bin\Debug\net6.0\SnakeGame.exe
+C:\git\CSharpConsoleGames\Snake\Snake\bin\Debug\net6.0\SnakeGame.deps.json
+C:\git\CSharpConsoleGames\Snake\Snake\bin\Debug\net6.0\SnakeGame.runtimeconfig.json
+C:\git\CSharpConsoleGames\Snake\Snake\bin\Debug\net6.0\SnakeGame.dll
+C:\git\CSharpConsoleGames\Snake\Snake\bin\Debug\net6.0\SnakeGame.pdb
+C:\git\CSharpConsoleGames\Snake\Snake\obj\Debug\net6.0\SnakeGame.dll
+C:\git\CSharpConsoleGames\Snake\Snake\obj\Debug\net6.0\refint\SnakeGame.dll
+C:\git\CSharpConsoleGames\Snake\Snake\obj\Debug\net6.0\SnakeGame.pdb
+C:\git\CSharpConsoleGames\Snake\Snake\obj\Debug\net6.0\SnakeGame.genruntimeconfig.cache
+C:\git\CSharpConsoleGames\Snake\Snake\obj\Debug\net6.0\ref\SnakeGame.dll

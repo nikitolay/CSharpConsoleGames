@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\git\\CSharpConsoleGames\\Snake\\Snake\\Snake.csproj",
-      "projectName": "Snake",
-      "projectPath": "C:\\git\\CSharpConsoleGames\\Snake\\Snake\\Snake.csproj",
+      "projectUniqueName": "C:\\git\\CSharpConsoleGames\\Snake\\Snake\\SnakeGame.csproj",
+      "projectName": "SnakeGame",
+      "projectPath": "C:\\git\\CSharpConsoleGames\\Snake\\Snake\\SnakeGame.csproj",
       "packagesPath": "C:\\Users\\nikor\\.nuget\\packages\\",
       "outputPath": "C:\\git\\CSharpConsoleGames\\Snake\\Snake\\obj\\",
       "projectStyle": "PackageReference",

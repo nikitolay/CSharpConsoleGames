@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Snake.Utilities
 {
     public static class ConsoleWindow
     {
-
+       static Random random = new Random();
         [DllImport("kernel32.dll", ExactSpelling = true)]
         private static extern IntPtr GetConsoleWindow();
         private static readonly IntPtr ThisConsole = GetConsoleWindow();
@@ -22,7 +23,7 @@ namespace Snake.Utilities
             Console.OutputEncoding = Encoding.Unicode;
             Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
             ShowWindow(ThisConsole, Maximize);
-            Console.BackgroundColor = ConsoleColor.White;
+            Console.BackgroundColor = (ConsoleColor)random.Next(0, 15);
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
             Console.CursorVisible = false;

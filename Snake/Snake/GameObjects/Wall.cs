@@ -43,6 +43,11 @@ namespace Snake.GameObjects
                 this.Draw(leftX, topY, WALL_SYMBOL);
             }
         }
+
+        public bool isPointoWall(Point snake)
+        {
+            return snake.LeftX==0||snake.LeftX==this.LeftX||snake.TopY==0||snake.TopY== this.TopY-1;
+        }
         public void AddPoints(Queue<Point> snakeElements)
         {
             this.FoodPoints = snakeElements.Count - 6;

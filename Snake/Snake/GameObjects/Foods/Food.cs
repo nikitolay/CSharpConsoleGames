@@ -17,9 +17,10 @@ namespace Snake.GameObjects.Foods
             this.wall = wall;
             this.symbol = symbol;
             this.FoodPoints = points;
+            this.random = new Random();
         }
 
-        private void SetRandomPosition(Queue<Point> snakeElements)
+        public void SetRandomPosition(Queue<Point> snakeElements)
         {
             this.LeftX = this.random.Next(2, this.wall.LeftX - 2);
             this.TopY = this.random.Next(2, this.wall.TopY - 2);
@@ -35,9 +36,13 @@ namespace Snake.GameObjects.Foods
             this.Draw(this.LeftX, this.TopY, symbol);
         }
 
-        private bool IsPointOfSnake(Queue<Point> snakeElements)
+        public bool IsPointOfSnake(Queue<Point> snakeElements)
         {
             return snakeElements.Any(x => x.LeftX == this.LeftX && x.TopY == this.TopY);
+        }
+        public bool IsFoodPoint(Point snake)
+        {
+            return this.LeftX == snake.LeftX && this.TopY == snake.TopY;
         }
 
         public int FoodPoints { get; set; }

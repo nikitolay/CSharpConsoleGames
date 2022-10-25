@@ -20,13 +20,28 @@ namespace Snake.GameObjects
 		public int LeftX
 		{
 			get { return leftX; }
-			set { leftX = value; }
+
+			set
+			{
+                //if (value < 0 || value > Console.WindowLeft)
+                //{
+                //    throw new Exception();
+                //}
+                leftX = value;
+			}
 		}
 
 		public int TopY
 		{
 			get { return topY; }
-			set { topY = value; }
+			set 
+			{
+				//if (value<0||value>Console.WindowTop)
+				//{
+				//	throw new Exception();
+				//}
+				topY = value; 
+			}
 		}
 
 
